@@ -1,0 +1,27 @@
+[
+    {
+        "typo": "dsicord",
+        "fix": "[d/D]iscord",
+        "comment": "It's in the app name, man!"
+    },
+    {
+        "typo": "mispell",
+        "fix": "misspell",
+        "comment": "Totally missed spelling class."
+    },
+    {
+        "typo": "jvaa",
+        "fix": "java",
+        "comment": "JvaaScript to Jvaa is like a craept to a cra."
+    },
+    {
+        "typo": "beggining",
+        "fix": "beginning",
+        "comment": "I'd rather beg."
+    },
+    {
+        "typo": "foward",
+        "fix": "forward",
+        "comment": "Thing's aren't going forward with that spelling."
+    }
+]

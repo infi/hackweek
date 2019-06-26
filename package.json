@@ -1,0 +1,28 @@
+{
+  "name": "hackweek",
+  "version": "0.0.0",
+  "description": "Hack Week Submission",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spviersechs/hackweek.git"
+  },
+  "keywords": [
+    "discord",
+    "hack",
+    "week"
+  ],
+  "author": "Infi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spviersechs/hackweek/issues"
+  },
+  "homepage": "https://github.com/spviersechs/hackweek#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "redis": "^2.8.0"
+  }
+}
