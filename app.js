@@ -25,7 +25,6 @@ client.on('message', async (message) => {
                 .setTitle("CommonMispellingHelp")
                 .addField("help", "Show this list")
                 .addField("settings", "Show help for `settings`")
-                .addField("stats", "See some stats")
                 .setColor(0x005500)
             message.reply(embedHelp)
         } else if (command === "settings") {
