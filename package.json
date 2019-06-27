@@ -23,6 +23,7 @@
   "homepage": "https://github.com/spviersechs/hackweek#readme",
   "dependencies": {
     "discord.js": "^11.5.1",
+    "node-fetch": "^2.6.0",
     "redis": "^2.8.0"
   }
 }

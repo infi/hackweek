@@ -3,9 +3,17 @@ const { Client, RichEmbed } = require("discord.js")
 const client = new Client();
 const rdb = require("redis").createClient()
 const util = require("util")
+const fetch = require("node-fetch")
 
 rdb.getAsync = util.promisify(rdb.get).bind(rdb)
 rdb.smembersA = util.promisify(rdb.smembers).bind(rdb)
+
+var rawlist
+
+async function fetchList() {
+    rawlist = await fetch("https://raw.githubusercontent.com/spVierSechs/CommonMisspellingJSONs/master/typos.json") // The list is hosted by GitHub on my CommonMisspellingJSONs repo
+}
+fetchList()
 
 // load config
 const cfg = {
@@ -110,7 +118,7 @@ client.on('message', async (message) => {
         rdb.sismember("disabled:" + message.guild.id, message.channel.id, async (err, reply) => {
             if (reply) return // zero is true so this works since reply is always binary
             let msgWords = message.content.toLocaleLowerCase().split(" ")
-            let list = require("./lists/typos.json")
+            let list = await rawlist.json()
             let chId = await rdb.getAsync("channel:"+message.guild.id) || message.channel.id
             let ch = client.channels.get(chId)
             for (let t of list) {
@@ -124,7 +132,7 @@ client.on('message', async (message) => {
 
 // when discord responded
 client.on('ready', () => {
-    client.user.setPresence({ game: { name: cfg.bot.game } })
+    client.user.setPresence({ game: { name: cfg.bot.game } } )
     console.log("Bot should be ready, as " + client.user.tag)
 })
 

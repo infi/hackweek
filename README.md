@@ -1,6 +1,8 @@
 # DCMB / CommonMisspellingBot for Discord
 
 Inspired by [u/CommonMisspellingBot](https://reddit.com/user/CommonMisspellingBot), this bot aims to improve the writing quality of Discord communities, but keep the not-so-serious aspect of Discord.
+  
+### You are very welcome to pull request more typos! This is only the baseline.
 
 ## Stack
 - `discord.js` on `node.js`
